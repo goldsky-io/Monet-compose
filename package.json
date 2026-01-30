@@ -1,0 +1,8 @@
+{
+  "name": "monet-compose",
+  "version": "1.0.0",
+  "packageManager": "pnpm@10.21.0",
+  "dependencies": {
+    "viem": "^2.39.3"
+  }
+}

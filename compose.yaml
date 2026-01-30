@@ -1,0 +1,14 @@
+name: "monet-protocol"
+api_version: "remove-restate"
+tasks:
+  - path: "./src/tasks/update-oracle.ts"
+    name: "updateOracle"
+    triggers:
+      - type: "http"
+        authentication: "auth_token"
+
+  - path: "./src/tasks/process-report.ts"
+    name: "processReport"
+    triggers:
+      - type: "http"
+        authentication: "auth_token"
