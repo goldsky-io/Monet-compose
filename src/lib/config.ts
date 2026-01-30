@@ -4,9 +4,11 @@ import { Address, AvailableChains, Chain } from "compose";
 export const SONIC_CHAIN: Chain = {
   id: 146,
   name: "Sonic",
+  testnet: false,
   nativeCurrency: { name: "Sonic", symbol: "S", decimals: 18 },
   rpcUrls: {
     default: { http: ["https://rpc.soniclabs.com"] },
+    public: { http: ["https://rpc.soniclabs.com"] },
   },
   blockExplorers: {
     default: { name: "SonicScan", url: "https://sonicscan.org" },
@@ -16,9 +18,11 @@ export const SONIC_CHAIN: Chain = {
 export const HYPEREVM_CHAIN: Chain = {
   id: 999,
   name: "HyperEVM",
+  testnet: false,
   nativeCurrency: { name: "HYPE", symbol: "HYPE", decimals: 18 },
   rpcUrls: {
     default: { http: ["https://rpc.hyperliquid.xyz/evm"] },
+    public: { http: ["https://rpc.hyperliquid.xyz/evm"] },
   },
   blockExplorers: {
     default: { name: "HyperEVM Scan", url: "https://hyperevmscan.io" },
@@ -31,7 +35,7 @@ export type ChainConfig =
   | { chain?: never; custom: Chain };
 
 export const CHAIN_CONFIG: Record<string, ChainConfig> = {
-  ethereum: { chain: "ethereum" },
+  ethereum: { chain: "mainnet" },
   base: { chain: "base" },
   avalanche: { chain: "avalanche" },
   sonic: { custom: SONIC_CHAIN },
