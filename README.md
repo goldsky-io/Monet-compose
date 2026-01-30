@@ -1,6 +1,6 @@
 # Monet Compose
 
-Compose app for Monet Protocol - handles oracle updates and vault reporting across multiple chains.
+Compose app for Monet Protocol
 
 ## Wallet Addresses
 
@@ -11,7 +11,7 @@ These are the Compose smart wallets that execute transactions. You'll need to gr
 
 ## Calling the Tasks
 
-Both tasks are HTTP endpoints. Use the API key in the Authorization header.
+Both tasks are HTTP endpoints. Use your goldsky API key in the Authorization header.
 
 ### updateOracle
 
@@ -44,7 +44,6 @@ Available vaults:
 ## Making Updates
 
 1. Edit the code
-2. Test locally: `goldsky compose dev`
-3. Deploy: `goldsky compose deploy`
+2. Deploy: `goldsky compose deploy`
 
 Contract addresses are in `src/lib/config.ts` if you need to add more chains or vaults.
